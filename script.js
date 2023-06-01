@@ -22,7 +22,9 @@ const shops = [
 
 const budget = [5000, 15000, 30000];
 
-const map = new Map();
+const map = new Map([
+    [{paper: 400}, 3000]
+]);
 //console.log(map);
 
 /*
@@ -38,7 +40,10 @@ shops.forEach((shop, i) => {
     map.set(shop, budget[i]);
 })
 
-//console.log(map);
+
+
+
+console.log(map);
 //console.log(map.get(shops[0]));
 //console.log(map.has(shops[0]));
 //console.log(map.has(shops[4]));
@@ -46,4 +51,6 @@ shops.forEach((shop, i) => {
 //console.log(map);
 //map.clear();
 //console.log(map);
+
+//console.log(map.size);
 
