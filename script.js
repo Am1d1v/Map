@@ -1,6 +1,8 @@
 
 
 
+/*
+
 const user = {
     name: "Dima",
     4: 30,
@@ -9,6 +11,8 @@ const user = {
         console.log(`${this.name} ${this.birthDay}`);
     }
 }
+
+*/
 
 //console.log(user);
 //console.log(Object.keys(user));
@@ -80,6 +84,76 @@ shops.forEach((shop, i) => {
 
 //console.log(typeof(map));
 
+/*
+
+const goods = [];
+
 for ( let shop of map.keys()){
-    console.log(shop);
+    //console.log(shop);
+    goods.push(Object.keys(shop));
 }
+
+console.log(goods);
+
+*/
+
+//======================== Values ======================
+
+/*
+
+for (let price of map.values()){
+    console.log(price);
+}
+
+*/ 
+
+//=================== Entries ===================
+
+/*
+
+for (let info of map.entries()){
+    console.log(info);
+}
+
+*/
+
+/*
+
+for (let [shop, price] of map.entries()){
+    console.log(shop, price);
+    //console.log(Object.keys(shop));
+    console.log(`Shop "${Object.keys(shop)}" has value ${price}`);
+}
+
+*/
+
+//=============== ForEach ====================================
+
+/*
+
+map.forEach((value, key) => {
+   // console.log(key, value);
+    console.log(Object.keys(key), value);
+})
+
+*/
+
+//==================================================
+
+
+const user = {
+    name: "Dima",
+    4: 30,
+    birthDay: "dd/mm/yyyy",
+    showMyPublicData: function(){
+        console.log(`${this.name} ${this.birthDay}`);
+    }
+}
+
+const userMap = new Map(Object.entries(user));
+//console.log(userMap);
+
+
+const newUserObj = Object.fromEntries(userMap);
+console.log(newUserObj);
+  
